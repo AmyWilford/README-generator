@@ -1,7 +1,7 @@
 // Packages Required for application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generateMarkdown = require('utils/generateMarkdown.js');
+const generateMarkdown = require('./utils/generateMarkdown');
 
 const questions = [
     {
@@ -51,13 +51,15 @@ const questions = [
         name: 'email' 
     }
 ]
-
+// Function to write the file using a given filename, and data source
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (err) => {
         err ? console.error(err) : console.log('Your README file is ready!')
     })
 }
 
+// will run inquirer prompt using questions array
+// Then, it will take the responses (function(input)) and consolelog the input - and write the file called README.md, and run generateMarkdown function using input as the data argument
 function init() {
     inquirer.prompt(questions)
     .then(function (input) {
