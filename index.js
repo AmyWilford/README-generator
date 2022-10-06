@@ -31,14 +31,14 @@ const questions = [
     },
     {
         type: 'input',
-        message: 'Enter repository test instruction:s',
+        message: 'Enter repository test instructions:',
         name: 'tests' 
     },
     {
         type: 'list',
         message: 'Select your repository license from the available options:',
         name: 'license',
-        choices: ['Academic Free License', 'Artistic License', 'Microsoft Public License', 'MIT', 'No License'] 
+        choices: ['Eclipse Public License', 'IBM Public License', 'MIT License', 'No License'] 
     },
     {
         type: 'input',
@@ -64,7 +64,7 @@ function init() {
     inquirer.prompt(questions)
     .then(function (input) {
         console.log(input)
-        writeToFile('README.md', generateMarkdown(input));
+        writeToFile('Sample-README.md', generateMarkdown(input));
     });
 }
 
