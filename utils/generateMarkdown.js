@@ -30,6 +30,15 @@ function renderLicenseLink(license) {
     return licenseUrl;
 }
 
+function newLicense (license) {
+    if (license) {
+        if (license === 'No License') {
+            return '';
+        } else {
+            return `\n- [License](#license)`;
+        }
+    }
+}
 // Function to return the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
@@ -46,8 +55,7 @@ ${renderLicenseSection(data.license)}
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [Tests](#tests)
-- [License](#license)
+- [Tests](#tests)${newLicense(data.license)}
 - [Questions](#questions)
 ## Description:\n
 ${data.description}\n
