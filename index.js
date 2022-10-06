@@ -1,8 +1,13 @@
+/*
+TO COMPLETE:
+- WHEN I choose a license for my application from a list of options
+THEN a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
+*/
+
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-
-// Prompts to populate README file
+// Inquirer prompts to populate README file
 inquirer
 .prompt([
     {
@@ -61,7 +66,7 @@ inquirer
     fs.writeFile('README.md',
 `# ${response.title}\n
 ## Description:\n
-${response.description}
+${response.description}\n
 ## Table of Contents:
 - [Installation](#installation)
 - [Usage](#usage)
@@ -70,16 +75,16 @@ ${response.description}
 - [License](#license)
 - [Questions](#questions)
 ## Installation:\n
-${response.installation}
+${response.installation}\n
 ## Contributing:\n
-${response.contributing}
+${response.contributing}\n
 ## Tests:\n
-${response.tests}
+${response.tests}\n
 ## License:\n
-${response.license}
+${response.license}\n
 ## Questions:\n
-User: https://github.com/${response.username}\n
-Email: ${response.email}`,
-        (error) =>
+GitHub User: https://github.com/${response.username}\n
+For any questions about this respository, please contact Amy Wilford: ${response.email}`,
+    (error) =>
     error ? console.error(error) : console.log('Your README file is complete!'))
 });
