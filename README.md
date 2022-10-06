@@ -1,41 +1,35 @@
-# test
+# dsag
 
-    ## Description:
+## Description:
 
-    test
+{description}
 
-    ## Table of Contents:
+## Table of Contents:
 
-    - [Installation](#installation)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [License](#license)
+- [Questions](#questions)
 
-    - [Usage](#usage)
+## Installation:
 
-    - [Contributing](#contributing)
+{installation}
 
-    - [Tests](#tests)
+## Contributing:
 
-    - [License](#license)
+{contributing}
 
-    - [Questions](#questions)
+## Tests:
 
-    ## Installation:
+{tests}
 
-    test
+## License:
 
-    ## Contributing:
+{license}
 
-    tea
+## Questions:
 
-    ## Tests:
-
-    sdg
-
-    ## License:
-
-    Academic Free Licesnse
-
-    ## Questions:
-
-    User: https://github.com/gd
-
-    Email: gda
+User: https://github.com/{username}
+Email: {email}
