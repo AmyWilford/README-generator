@@ -1,13 +1,10 @@
 # test
 
-
     ## Description:
-
 
     test
 
     ## Table of Contents:
-
 
     - [Installation](#installation)
 
@@ -23,28 +20,22 @@
 
     ## Installation:
 
-
     test
 
     ## Contributing:
 
-
-    test
-
+    tea
 
     ## Tests:
 
-    test
-
+    sdg
 
     ## License:
 
-    MIT
-
+    Academic Free Licesnse
 
     ## Questions:
 
+    User: https://github.com/gd
 
-    User: https://github.com/test
-
-    Email: test
+    Email: gda

@@ -39,7 +39,7 @@ inquirer
         type: 'checkbox',
         message: 'Select your repository license from the available options:',
         name: 'license',
-        choices: ['Academic Free Licesnse', 'Artistic License', 'Microsoft Public License', 'MIT', 'No License'] 
+        choices: ['Academic Free License', 'Artistic License', 'Microsoft Public License', 'MIT', 'No License'] 
     },
     {
         type: 'input',
@@ -52,29 +52,33 @@ inquirer
         name: 'email' 
     }
 ])
+
 .then((response) => {
-    fs.writeFile('README.md',
-    `# ${response.title}\n
-    ## Description:\n
-    ${response.description}\n
-    ## Table of Contents:\n
-    - [Installation](#installation)\n
-    - [Usage](#usage)\n
-    - [Contributing](#contributing)\n
-    - [Tests](#tests)\n
-    - [License](#license)\n
-    - [Questions](#questions)\n
-    ## Installation:\n
-    ${response.installation}\n
-    ## Contributing:\n
-    ${response.contributing}\n
-    ## Tests:\n
-    ${response.tests}\n
-    ## License:\n
-    ${response.license}\n
-    ## Questions:\n
-    User: https://github.com/${response.username}\n
-    Email: ${response.email}\n`,
-        (error) =>
-    error ? console.error(error) : console.log('Your README file is complete!'))
+    console.log(`${response.title}, ${response.description}, ${response.installation}, ${response.usage}, ${response.contributing}, ${response.tests}, ${response.license}, ${response.username}, ${response.email}`)
 });
+// .then((response) => {
+//     fs.writeFile('README.md',
+//     `# ${response.title}\n
+//     ## Description:\n
+//     ${response.description}\n
+//     ## Table of Contents:\n
+//     - [Installation](#installation)\n
+//     - [Usage](#usage)\n
+//     - [Contributing](#contributing)\n
+//     - [Tests](#tests)\n
+//     - [License](#license)\n
+//     - [Questions](#questions)\n
+//     ## Installation:\n
+//     ${response.installation}\n
+//     ## Contributing:\n
+//     ${response.contributing}\n
+//     ## Tests:\n
+//     ${response.tests}\n
+//     ## License:\n
+//     ${response.license}\n
+//     ## Questions:\n
+//     User: https://github.com/${response.username}\n
+//     Email: ${response.email}\n`,
+//         (error) =>
+//     error ? console.error(error) : console.log('Your README file is complete!'))
+// });
