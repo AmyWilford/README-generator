@@ -1,6 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
+
 // Write README file
 fs.writeFile('README.md', 'utf8', (error, data) =>
 error ? console.error(error) : console.log(data)
@@ -57,3 +58,27 @@ inquirer
     }
 ])
 
+fs.appendFile('README.md', 
+`# ${title}\n\n
+## Description:\n\n
+${description}\n
+## Table of Contents:\n\n
+[Installation](#installation)\n
+[Usage](#usage)\n
+[Contributing](#contributing)\n
+[Tests](#tests)\n
+[License](#license)\n
+[Questions](#questions)\n
+## Installation:\n\n
+${installation}\n
+## Contributing:\n\n
+${contributing}\n\n
+## Tests:\n
+${tests}\n\n
+## License:\n
+${license}\n\n
+## Questions:\n\n
+User: https://github.com/${username}\n
+Email: ${email}\n`, (error) =>
+error ? console.error(error) : console.log('Your README file is complete!')
+);
