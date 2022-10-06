@@ -1,15 +1,9 @@
-/*
-TO COMPLETE:
-- WHEN I choose a license for my application from a list of options
-THEN a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
-*/
-
+// Packages Required for application
 const inquirer = require('inquirer');
 const fs = require('fs');
+const generateMarkdown = require('utils/generateMarkdown.js');
 
-// Inquirer prompts to populate README file
-inquirer
-.prompt([
+const questions = [
     {
         type: 'input',
         message: 'Enter your project name:',
@@ -56,35 +50,21 @@ inquirer
         message: 'Enter your email address:',
         name: 'email' 
     }
-])
-// .then((response) =>{
-//     fs.writeFile('README.md', 'utf-8', (err) =>
-//    err ? console.error(err) : console.log('Your README file is complete!'))
-// });
+]
 
-.then((response) => {
-    fs.writeFile('README.md',
-`# ${response.title}\n
-## Description:\n
-${response.description}\n
-## Table of Contents:
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [Tests](#tests)
-- [License](#license)
-- [Questions](#questions)
-## Installation:\n
-${response.installation}\n
-## Contributing:\n
-${response.contributing}\n
-## Tests:\n
-${response.tests}\n
-## License:\n
-${response.license}\n
-## Questions:\n
-GitHub User: https://github.com/${response.username}\n
-For any questions about this respository, please contact Amy Wilford: ${response.email}`,
-    (error) =>
-    error ? console.error(error) : console.log('Your README file is complete!'))
-});
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, (err) => {
+        err ? console.error(err) : console.log('Your README file is ready!')
+    })
+}
+
+function init() {
+    inquirer.prompt(questions)
+    .then(function (input) {
+        console.log(input)
+        writeToFile('README.md', generateMarkdown(input));
+    });
+}
+
+// Function call to initialize app
+init();
