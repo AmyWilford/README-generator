@@ -1,35 +1,29 @@
-# dsag
+# gdas
 
 ## Description:
 
-{description}
-
+gdas
 ## Table of Contents:
-
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [Tests](#tests)
 - [License](#license)
 - [Questions](#questions)
-
 ## Installation:
 
-{installation}
-
+dgsa
 ## Contributing:
 
-{contributing}
-
+gdsa
 ## Tests:
 
-{tests}
-
+adsg
 ## License:
 
-{license}
-
+Academic Free License
 ## Questions:
 
-User: https://github.com/{username}
-Email: {email}
+User: https://github.com/AmyWilford
+
+Email: gdas
