@@ -58,8 +58,7 @@ function writeToFile(fileName, data) {
     });
 }
 
-// will run inquirer prompt using questions array
-// Then, it will take the responses (function(input)) and consolelog the input - and write the file called README.md, and run generateMarkdown function using input as the data argument
+// Function to initialize inqurier prompts. Then, use responses to write README file and generate copy.
 function init() {
     inquirer.prompt(questions)
     .then(function (response) {
@@ -68,5 +67,5 @@ function init() {
     });
 }
 
-// Function call to initialize app
+// Call function to initialize program
 init();
