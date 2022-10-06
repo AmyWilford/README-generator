@@ -1,38 +1,50 @@
-# gdas
+# README.md generator
 
-## License:
-undefined
 ## Table of Contents:
+
 - [Description](#description)
-- [Installation](#installation)
+- [Technologies-Used](#technologies-used)
 - [Usage](#usage)
-- [Contributing](#contributing)
-- [Tests](#tests)
+- [Installation](#installation)
+- [Demo](#demo)
 - [License](#license)
-- [Questions](#questions)
+
 ## Description:
 
-gdsa
+This repository uses node.js and npm inquirer package to generate a completed professional README.md file using prompts in the command terminal.
+
+## Technologies Used:
+
+- JavaScript
+- Node.js
+- NPM Inquirer Package, v. 8.2.4
+
+## Usage:
+
+To use: Open an integrated terminal linked to the index.js file. Run node index.js in the terminal command line. Users will be given a series of prompts requesting information about their project, including:
+
+- Project Title
+- Description
+- Usage
+- Ways to contribute
+- Tests
+- License
+- Methods to contact you, the repository creator.
+
+Once all prompts are complete - a README.md file will be generated - with the file name Sample-README.md.
 
 ## Installation:
 
-gas
+This application requires npm inquirer package, version 8.2.4.
+For installation, in your terminal command line, run:
 
-## Contributing:
+- npm init -y
+- npm install@inquirer 8.2.4
 
-aaa
+## Demo:
 
-## Tests:
-
-aaa
+[View a video walk through of this application in use]()
 
 ## License:
 
-Academic Free License
-
-## Questions:
-
-For any questions about this respository, please contact Amy Wilford: 
-GitHub: https://github.com/aaa
-
-Email: aaa
+NA

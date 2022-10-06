@@ -17,7 +17,7 @@ const questions = [
     {
         type: 'input',
         message: 'Enter any applicable installation instructions:',
-        name: 'installation'
+        name: 'installation',
     },
     {
         type: 'input',
@@ -55,16 +55,16 @@ const questions = [
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (err) => {
         err ? console.error(err) : console.log('Your README file is ready!')
-    })
+    });
 }
 
 // will run inquirer prompt using questions array
 // Then, it will take the responses (function(input)) and consolelog the input - and write the file called README.md, and run generateMarkdown function using input as the data argument
 function init() {
     inquirer.prompt(questions)
-    .then(function (input) {
-        console.log(input)
-        writeToFile('Sample-README.md', generateMarkdown(input));
+    .then(function (response) {
+        console.log(response)
+        writeToFile('Sample-README.md', generateMarkdown(response));
     });
 }
 

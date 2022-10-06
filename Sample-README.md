@@ -1,6 +1,6 @@
-# gda
+# gd
 
-![License](https://img.shields.io/badge/License-EPL_1.0-red.svg)(https://opensource.org/licenses/EPL-1.0)
+[![License: IPL 1.0](https://img.shields.io/badge/License-IPL_1.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)
 ## Table of Contents:
 - [Description](#description)
 - [Installation](#installation)
@@ -15,24 +15,24 @@ gdas
 
 ## Installation:
 
-gdas
+gaf
 
 ## Contributing:
 
-dga
+gdas
 
 ## Tests:
 
-gdas
+gdsa
 
 ## License:
 
-Eclipse Public License
+IBM Public License
 
 ## Questions:
 
 For any questions about this respository, please contact Amy:
  
-GitHub: https://github.com/gdas
+GitHub: https://github.com/gdsa
 
-Email: dga
+Email: gdas
