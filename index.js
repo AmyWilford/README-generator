@@ -11,7 +11,7 @@ const questions = [
         validate: function(title)
         {
             if (!title) {
-                console.log('please enter a project title')
+                console.log('\x1b[31m%s\x1b[0m', 'please enter a project title')
                 return false;
             }
             return true;
@@ -24,7 +24,7 @@ const questions = [
         validate: function(description)
         {
             if (!description) {
-                console.log('please enter a project description')
+                console.log('\x1b[31m%s\x1b[0m', 'please enter a project description')
                 return false;
             }
             return true;
@@ -37,7 +37,7 @@ const questions = [
         validate: function(installation)
         {
             if (!installation) {
-                console.log('please enter installation details. Input N/A if not applicable')
+                console.log('\x1b[31m%s\x1b[0m', 'please enter installation details. Input N/A if not applicable')
                 return false;
             }
             return true;
@@ -50,7 +50,7 @@ const questions = [
         validate: function(usage)
         {
             if (!usage) {
-                console.log('please enter usage instructions. Input N/A if not applicable')
+                console.log('\x1b[31m%s\x1b[0m', 'please enter usage instructions. Input N/A if not applicable')
                 return false;
             }
             return true;
@@ -63,7 +63,7 @@ const questions = [
         validate: function(contributing)
         {
             if (!contributing) {
-                console.log('please enter contribution instructions. Input N/A if not applicable')
+                console.log('\x1b[31m%s\x1b[0m', 'please enter contribution instructions. Input N/A if not applicable')
                 return false;
             }
             return true;
@@ -76,7 +76,7 @@ const questions = [
         validate: function(tests)
         {
             if (!tests) {
-                console.log('please enter test instructions. Input N/A if not applicable')
+                console.log('\x1b[31m%s\x1b[0m', 'please enter test instructions. Input N/A if not applicable')
                 return false;
             }
             return true;
@@ -95,7 +95,7 @@ const questions = [
         validate: function(username)
         {
             if (!username) {
-                console.log('please enter a github username.')
+                console.log('\x1b[31m%s\x1b[0m', 'please enter a github username.')
                 return false;
             }
             return true;
@@ -108,7 +108,7 @@ const questions = [
         validate: function(email)
         {
             if (!email) {
-                console.log('please enter an email address. Input N/A if you do not wish to be contacted')
+                console.log('\x1b[31m%s\x1b[0m', 'please enter an email address. Input N/A if you do not wish to be contacted')
                 return false;
             }
             return true;
@@ -118,7 +118,7 @@ const questions = [
 // Function to write the file using a given filename, and data source
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (err) => {
-        err ? console.error(err) : console.log('Your README file is ready!')
+        err ? console.error(err) : console.log('Your README.md file is ready!')
     });
 }
 
