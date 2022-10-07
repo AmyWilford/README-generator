@@ -38,15 +38,19 @@ Once all prompts are complete - a README.md file will be generated - with the fi
 This application requires npm inquirer package, version 8.2.4.
 For installation, in your terminal command line, run:
 
-- npm init -y 
-    - This command will create a package.json file in your project folder
+- npm init -y
+  - This command will create a package.json file in your project folder
 - npm install@inquirer 8.2.4
-    - This command will install inquirer v. 8.2.4 as a dependency in your package.json and is required for this respository to function
+  - This command will install inquirer v. 8.2.4 as a dependency in your package.json and is required for this respository to function
 
 ## Demo:
 
-[View a video walk through of this application in use]()
+- [View a video walk through of this application in use](https://drive.google.com/file/d/1T0WwwHL_q5XTZ7_wfPTrHZHP9erZhDNo/view)
+
+- Screenshot of application in use:
+
+  <img src="images/README-generator screenshot.png" width="400px" alt="screenshot of application in use">
 
 ## License:
 
-NA
+N/A

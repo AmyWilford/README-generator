@@ -1,6 +1,6 @@
-# Title
+# Sample README
 
-[![License](https://img.shields.io/badge/License-EPL_1.0-red.svg)](https://opensource.org/licenses/EPL-1.0)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ## Table of Contents:
 - [Description](#description)
 - [Installation](#installation)
@@ -11,28 +11,26 @@
 - [Questions](#questions)
 ## Description:
 
-description
+This is a sample project README file
 
 ## Installation:
 
-dfas
+npm inquirer
 
 ## Contributing:
 
-gdsa
+na
 
 ## Tests:
 
-gda
-
+na
 ## License:
-
-Eclipse Public License
+ MIT License
 
 ## Questions:
 
-For any questions about this respository, please contact Amy:
+For any questions about this respository, please contact:
  
-GitHub: https://github.com/gdas
+- GitHub: https://github.com/AmyWilford
 
-Email: gdas
+- Email: test@gmail.com

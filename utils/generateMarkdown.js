@@ -1,36 +1,20 @@
-// function to return a license badge based on which license is passed in
-// If there is no license, return an empty string
+// function to return a license badge based on which license is passed in - If there is no license, return an empty string
 function renderLicenseBadge(license) {
     let licenseBadge;
     if (license == 'Eclipse Public License') {
-        licenseBadge = `[![License](https://img.shields.io/badge/License-EPL_1.0-red.svg)]`;
+        licenseBadge = `[![License](https://img.shields.io/badge/License-EPL_1.0-red.svg)](https://opensource.org/licenses/EPL-1.0)`;
     } else if (license == 'IBM Public License') {
-        licenseBadge = `[![License: IPL 1.0](https://img.shields.io/badge/License-IPL_1.0-blue.svg)]`;
+        licenseBadge = `[![License: IPL 1.0](https://img.shields.io/badge/License-IPL_1.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)`;
     } else if (license == 'MIT License') {
-        licenseBadge = `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]`
+        licenseBadge = `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
     } else {
         licenseBadge = '';
     }
     return licenseBadge;
 }
 
-// Function to return the license link
-// If there is no license, return an empty string
+// Function to render License link inclusion within table of contents
 function renderLicenseLink(license) {
-    let licenseUrl;
-    if (license == 'Eclipse Public License') {
-        licenseUrl = `(https://opensource.org/licenses/EPL-1.0)`;
-    } else if (license == 'IBM Public License') {
-        licenseUrl = `(https://opensource.org/licenses/IPL-1.0)`;
-    } else if (license == 'MIT License') {
-        licenseUrl = `(https://opensource.org/licenses/MIT)`;
-    } else {
-        licenseUrl = '';
-    }
-    return licenseUrl;
-}
-
-function newLicense (license) {
     if (license) {
         if (license === 'No License') {
             return '';
@@ -39,10 +23,20 @@ function newLicense (license) {
         }
     }
 }
-// Function to return the license section of README
-// If there is no license, return an empty string
+// Function to render License section of README with license details
+function renderLicenseDetails(license) {
+    if (license) {
+        if (license === 'No License') {
+            return '';
+        } else {
+            return `\n## License:\n ${license}\n`;
+        }
+    }
+}
+
+// Function to return the license section of README - If there is no license, return an empty string
 function renderLicenseSection(license) {
-    let finalLicense = `${renderLicenseBadge(license)}${renderLicenseLink(license)}`;
+    let finalLicense = `${renderLicenseBadge(license)}`;
     return finalLicense;
 }
 
@@ -55,7 +49,7 @@ ${renderLicenseSection(data.license)}
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [Tests](#tests)${newLicense(data.license)}
+- [Tests](#tests)${renderLicenseLink(data.license)}
 - [Questions](#questions)
 ## Description:\n
 ${data.description}\n
@@ -64,13 +58,11 @@ ${data.installation}\n
 ## Contributing:\n
 ${data.contributing}\n
 ## Tests:\n
-${data.tests}\n
-## License:\n
-${data.license}\n
+${data.tests}${renderLicenseDetails(data.license)}
 ## Questions:\n
-For any questions about this respository, please contact Amy:\n 
-GitHub: https://github.com/${data.username}\n
-Email: ${data.email}`;
+For any questions about this respository, please contact:\n 
+- GitHub: https://github.com/${data.username}\n
+- Email: ${data.email}`;
 }
 
 // export function to for use in index.js
